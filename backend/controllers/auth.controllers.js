@@ -29,7 +29,7 @@ export const singup = async (req, res) => {
             username,
             password: hashedPassword,
             gender,
-            profileImage: gender === "boy"? boyProfile : girlProfile
+            profilePic: gender === "male"? boyProfile : girlProfile
         });
         
         if(newUser){
@@ -40,7 +40,7 @@ export const singup = async (req, res) => {
                 _id: newUser._id,
                 fullName: newUser.fullName,
                 username: newUser.username,
-                profileImage: newUser.profileImage
+                profilePic: newUser.profilePic
              });
         }else{
             res.status(400).json({ message: "Invalid user data" });
@@ -69,7 +69,7 @@ export const login = async (req, res) => {
             _id: user._id,
             fullName: user.fullName,
             username: user.username,
-            profileImage: user.profileImage
+            profilePic: user.profilePic
         });
 
     } catch (error) {
