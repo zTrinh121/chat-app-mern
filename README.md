@@ -23,18 +23,18 @@ To run this project locally, follow these steps:
    cd chat-app-mern
    npm install
    
-2. **Set up environment variables:**\
+2. **Set up environment variables:**
     ```bash
     DATABASE_URL=mongodb+srv://<username>:<password>@cluster0.mongodb.net/myDatabase?retryWrites=true&w=majority
     JWT_SECRET=your_jwt_secret
     PORT=5000
 
-3. **Start the server**\
+3. **Start the server**
      ```bash
      cd backend
      npm run server
 
-4. **Start the client**\
+4. **Start the client**
      ```bash
      cd frontend
      npm run dev
