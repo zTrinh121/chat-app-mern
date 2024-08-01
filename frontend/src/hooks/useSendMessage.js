@@ -7,7 +7,7 @@ const useSendMessage = () => {
   const { messages, setMessages, selectedConversation } = useConversation();
 
   const sendMessage = async (message) => {
-    console.log(selectedConversation._id);
+    //console.log(selectedConversation._id);
     setLoading(true);
     try {
       const res = await fetch(
