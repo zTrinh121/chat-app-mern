@@ -6,7 +6,7 @@ const generateTokenSetCookie = (userId, res) => {
         maxAge:15*24*60*1000, 
         httpOnly: true, //prevent XSS attacks cross-site scripting attacks
         sameSite:"strict",
-        secure: process.env.NODE_ENV === 'development', //only set cookie over https in development environment
+        secure: process.env.NODE_ENV !== 'development', //only set cookie over https in development environment
      });
 }
 
